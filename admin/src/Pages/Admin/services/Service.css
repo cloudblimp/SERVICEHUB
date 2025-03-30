@@ -1,0 +1,13 @@
+.services {
+  display: flex;
+  width: 100%;
+}
+.servicecontainer {
+  flex: 6;
+}
+.service-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}

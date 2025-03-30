@@ -1,0 +1,59 @@
+.single {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+.singlecontainer {
+  flex: 6;
+  background-color: rgb(241, 241, 241);
+}
+.singlecontainer > .topS {
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+}
+.leftS {
+  flex: 1;
+  padding: 20px;
+  box-shadow: -1px 2px 5px -1px rgba(171, 164, 171, 0.6);
+  background-color: white;
+}
+.leftS > h1 {
+  font-size: 15px;
+  font-weight: 600;
+  color: lightgray;
+  margin-bottom: 10px;
+}
+.rightS {
+  flex: 2;
+  padding: 20px;
+  box-shadow: -1px 2px 5px -1px rgba(171, 164, 171, 0.6);
+  background-color: white;
+}
+.leftS > .item {
+  display: flex;
+
+  gap: 20px;
+}
+.details {
+  padding: 10px;
+}
+.details > h1 {
+  font-size: 25px;
+  font-weight: 600;
+  color: rgb(80, 77, 77);
+}
+.detailItem {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.itemKey {
+  margin-right: 10px;
+  color: gray;
+  font-size: 14px;
+}
+.itemValue {
+  font-size: 13px;
+  font-weight: 400;
+  color: gray;
+}

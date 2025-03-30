@@ -1,0 +1,7 @@
+.provider {
+  display: flex;
+  width: 100%;
+}
+.providercontainer {
+  flex: 6;
+}

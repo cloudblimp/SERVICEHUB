@@ -1,0 +1,13 @@
+.chart {
+  flex: 4;
+  box-shadow: -1px 2px 5px -1px rgba(171, 164, 171, 0.6);
+  padding: 10px;
+  color: gray;
+  background-color: white;
+}
+.chart > .title {
+  /* margin-bottom: 20px; */
+  font-size: 15px;
+  margin-left: 10px;
+  font-weight: 500;
+}

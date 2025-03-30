@@ -1,0 +1,16 @@
+.listbox {
+  display: flex;
+  width: 100%;
+}
+.listboxcontainer {
+  flex: 6;
+  background-color: whitesmoke;
+}
+.w {
+  padding: 10px 20px;
+  width: 30%;
+  border-radius: none;
+}
+.listcontainer {
+  width: 80vw;
+}

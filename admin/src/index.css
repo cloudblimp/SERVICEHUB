@@ -1,0 +1,28 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+/* font-family: 'Cormorant Garamond', serif;
+font-family: 'Plus Jakarta Sans', sans-serif;
+font-family: 'Prata', serif;
+font-family: 'Ubuntu', sans-serif; */
+@layer tailwind-base, primereact, tailwind-utilities;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+/* 
+background-color:[#E5E5E5]
+background-color:[#1A3570]
+background-color:[#FCA311]
+background-color:[#FFFFFF]
+background-color:[#1F1F20]  */
