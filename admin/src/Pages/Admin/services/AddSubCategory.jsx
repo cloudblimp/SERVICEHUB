@@ -140,3 +140,152 @@ const AddSubCategory = () => {
 };
 
 export default AddSubCategory;
+
+// import React, { useState, useEffect } from "react";
+// import {
+//   Button,
+//   Card,
+//   CardBody,
+//   CardFooter,
+//   Typography,
+//   Input,
+//   Alert,
+// } from "@material-tailwind/react";
+// import { addSubCat, getdata } from "../../../services/Apis";
+
+// const AddSubCategory = () => {
+//   const [formData, setFormData] = useState({
+//     sub_category_name: "",
+//     photo: null,
+//     s_id: "",
+//   });
+//   const [categoryList, setCategoryList] = useState([]);
+//   const [loading, setLoading] = useState(false);
+//   const [successAlert, setSuccessAlert] = useState(false);
+//   const [error, setError] = useState(null);
+
+//   useEffect(() => {
+//     fetchSubCatData();
+//   }, []);
+
+//   const fetchSubCatData = async () => {
+//     try {
+//       const response = await getdata("/cat/getAllCat");
+//       setCategoryList(response.data.data);
+//     } catch (err) {
+//       console.error("Error fetching data:", err);
+//     }
+//   };
+
+//   const handleAddService = async (e) => {
+//     e.preventDefault();
+//     setLoading(true);
+//     setSuccessAlert(false);
+//     setError(null);
+
+//     const formDataToSend = new FormData();
+//     formDataToSend.append("sub_category_name", formData.sub_category_name);
+//     formDataToSend.append("s_id", formData.s_id);
+//     if (formData.photo) formDataToSend.append("photo", formData.photo);
+
+//     try {
+//       await addSubCat(formDataToSend, "/subcat/addSubCat");
+//       setLoading(false);
+//       setSuccessAlert(true);
+//       setFormData({ sub_category_name: "", photo: null, s_id: "" });
+//     } catch (err) {
+//       setError("Failed to add sub category.");
+//       setLoading(false);
+//       console.error("Error adding sub category:", err);
+//     }
+//   };
+
+//   const handleInputChange = (e) => {
+//     setFormData({
+//       ...formData,
+//       sub_category_name: e.target.value,
+//     });
+//   };
+
+//   const handleServiceInputChange = (e) => {
+//     setFormData({
+//       ...formData,
+//       s_id: e.target.value,
+//     });
+//   };
+
+//   const handleImageUpload = (e) => {
+//     setFormData({
+//       ...formData,
+//       photo: e.target.files[0],
+//     });
+//   };
+
+//   return (
+//     <form onSubmit={handleAddService}>
+//       <Card className="mx-auto w-fit relative bg-white">
+//         <CardBody className="flex flex-col gap-4">
+//           <Typography className="text-[#1A3570] font-bold" variant="h6">
+//             Add New Sub Service Category
+//           </Typography>
+//           <div className="flex gap-4">
+//             <Input
+//               type="text"
+//               name="sub_category_name"
+//               label="Sub Service Category Name"
+//               required
+//               value={formData.sub_category_name}
+//               onChange={handleInputChange}
+//             />
+//           </div>
+//           <div>
+//             <input
+//               type="file"
+//               name="photo"
+//               onChange={handleImageUpload}
+//             />
+//           </div>
+//           <div>
+//             <select
+//               name="s_id"
+//               onChange={handleServiceInputChange}
+//               value={formData.s_id}
+//               required
+//             >
+//               <option value="">Select Service Category</option>
+//               {Array.isArray(categoryList) &&
+//                 categoryList.map((category) => (
+//                   <option key={category._id} value={category._id}>
+//                     {category.service_name}
+//                   </option>
+//                 ))}
+//             </select>
+//           </div>
+//         </CardBody>
+//         <CardFooter className="pt-0">
+//           {loading ? (
+//             <Button className="bg-[#1A3570]" fullWidth disabled>
+//               Loading...
+//             </Button>
+//           ) : (
+//             <Button className="bg-[#1A3570]" fullWidth type="submit">
+//               Create
+//             </Button>
+//           )}
+//         </CardFooter>
+//       </Card>
+//       {successAlert && (
+//         <Alert color="green" className="mt-4">
+//           Sub service category created successfully!
+//         </Alert>
+//       )}
+//       {error && (
+//         <Alert color="red" className="mt-4">
+//           {error}
+//         </Alert>
+//       )}
+//     </form>
+//   );
+// };
+
+// export default AddSubCategory;

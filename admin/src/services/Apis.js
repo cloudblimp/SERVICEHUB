@@ -41,6 +41,15 @@ export const addSubCat = async (data, URL) => {
     "multipart/form-data"
   );
 };
+export const addMiniCat = async (data) => {
+  console.log("Add Mini Category", data);
+  return await commonrequest(
+    "POST",
+    `${BACKEND_URL}/miniCat/addMiniCat`,
+    data,
+    "multipart/form-data"
+  );
+};
 export const addFunction = async (data, URL) => {
   console.log(data);
   console.log(URL);

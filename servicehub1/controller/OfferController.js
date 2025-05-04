@@ -52,6 +52,38 @@ const getAllOffer = async (req, res) => {
   }
 };
 
+const getAllOffers = async (req, res) => {
+  try {
+    console.log("Fetching all offers from the database...");
+
+    const offers = await OfferModel.find(); // Assuming OfferModel is the Mongoose model for offers
+
+    if (!offers || offers.length === 0) {
+      console.warn("No offers found in the database.");
+      return res.status(200).json({
+        success: true,
+        message: "No offers found",
+        data: [],
+      });
+    }
+
+    console.log("Offers fetched successfully:", offers);
+
+    return res.status(200).json({
+      success: true,
+      message: "Offers fetched successfully",
+      data: offers,
+    });
+  } catch (err) {
+    console.error("Error fetching offers:", err);
+    return res.status(500).json({
+      success: false,
+      message: "Error fetching offers",
+      error: err.message,
+    });
+  }
+};
+
 const updateOfferById = async (req, res) => {
   const id = req.params.id;
 
@@ -118,6 +150,7 @@ const OfferForService = async (req, res) => {
 module.exports = {
   addOffer,
   getAllOffer,
+  getAllOffers,
   updateOfferById,
   deleteOfferById,
   OfferForService,

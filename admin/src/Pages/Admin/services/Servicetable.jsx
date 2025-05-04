@@ -2,7 +2,7 @@ import { Card, Typography, Button, Dialog } from "@material-tailwind/react";
 import EditService from "./EditService";
 import { useState } from "react";
 import EditSubCategory from "./EditSubCategory";
-import EditNestedCategory from "./EditnestedCategory";
+import EditNestedCategory from "./EditNestedCategory";
 
 const Servicetable = ({ TABLE_HEAD, TABLE_ROWS, flag, categoryNames }) => {
   const [open, setOpen] = useState(false);

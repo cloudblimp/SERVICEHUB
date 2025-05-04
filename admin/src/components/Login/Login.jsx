@@ -59,7 +59,7 @@ const Login = () => {
       }
 
       // Check if the email and password match the hardcoded admin credentials
-      if (email === "admin@gmail.com" && password === "Apassword") {
+      if (email === "admin@gmail.com" && password === "@Admin123") {
         login("admin");
         setIsLoggedIn(true);
         localStorage.setItem("Loggedin", "admin");

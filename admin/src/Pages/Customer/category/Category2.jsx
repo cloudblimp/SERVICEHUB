@@ -316,7 +316,7 @@ const Section2 = ({ data }) => {
     return null;
   } else {
     return (
-      <div className="shadow-lg rounded-md p-4 h-[32vh] w-[20rem] flex flex-col bg-white">
+      <div className="shadow-lg rounded-md p-4 h-[32vh] w-[20rem] flex flex-col bg-blue-500">
         <div className="flex justify-between items-center border-b-2 pb-4">
           <span className="flex items-center space-x-2">
             <div className=" w-[5vw] h-[5vw] rounded-full overflow-hidden">

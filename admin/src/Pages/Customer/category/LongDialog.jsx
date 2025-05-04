@@ -8,8 +8,8 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import {
-  CLeaningPopExclude,
-  CLeaningPopInclude,
+  PetServiceExclude,
+  PetServiceInclude,
 } from "../../../Data/Customer/Database";
 export function LongDialog({ name }) {
   const [open, setOpen] = React.useState(false);
@@ -31,7 +31,7 @@ export function LongDialog({ name }) {
           <Typography className="font-normal border-b-2">
             <h1 className="font-bold text-lg text-green-700 ">Includes</h1>
             <ul class="list-inside list-disc leading-relaxed my-3">
-              {CLeaningPopInclude.map(({ heading, sub }, index) => {
+              {PetServiceInclude.map(({ heading, sub }, index) => {
                 return (
                   <li key={index} className=" mb-3">
                     <span className="font-bold text-md text-[#1A3570]">
@@ -46,7 +46,7 @@ export function LongDialog({ name }) {
           <Typography className="font-normal border-b-2 mt-4">
             <h1 className="font-bold text-lg text-red-700">Excludes</h1>
             <ul class="list-inside list-disc leading-relaxed my-3">
-              {CLeaningPopExclude.map(({ sub }, index) => {
+              {PetServiceExclude.map(({ sub }, index) => {
                 return (
                   <li key={index} className="">
                     <span className="font-bold text-md text-[#1A3570]">

@@ -8,11 +8,11 @@ import {
   Input,
   Alert,
 } from "@material-tailwind/react";
-import { getdata, addSubCat } from "../../../services/Apis";
+import { getdata, addMiniCat } from "../../../services/Apis";
 
 const AddMiniCat = () => {
   const [formData, setFormData] = useState({
-    mini_category_name: "",
+    mini_cat_name: "",
     nested_cat_id: "",
     min_price: "",
     max_price: "",
@@ -56,12 +56,12 @@ const AddMiniCat = () => {
     setLoading(true); // Set loading state to true while waiting for response
     setSuccessAlert(false);
     try {
-      const response = await addSubCat(formData, "/minicat/addMiniCat");
-      console.log("Sub Cta Service:", response);
+      const response = await addMiniCat(formData);
+      console.log("Mini Category Service:", response);
       setLoading(false); // Set loading state to false after receiving response
       setSuccessAlert(true); // Set success alert to true
     } catch (error) {
-      console.error("Error adding service category:", error);
+      console.error("Error adding mini category:", error);
       setLoading(false); // Set loading state to false if there's an error
     }
   };
@@ -78,7 +78,7 @@ const AddMiniCat = () => {
             <span>
               <Input
                 type="text"
-                name="mini_category_name"
+                name="mini_cat_name"
                 label="Mini Category name"
                 onChange={handleInputChange}
               />
@@ -153,7 +153,7 @@ const AddMiniCat = () => {
               fullWidth
               onClick={handleCreate}
               disabled={
-                !formData.mini_category_name ||
+                !formData.mini_cat_name ||
                 !formData.min_price ||
                 !formData.max_price
               }

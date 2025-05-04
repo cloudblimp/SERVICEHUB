@@ -915,41 +915,71 @@ export const EPCService = [
   },
 ];
 //LongDialog
-export const CLeaningPopInclude = [
+// export const CLeaningPopInclude = [
+//   {
+//     heading: "Objects removal before cleaning",
+//     sub: "Removal of toiletries and other objects from the bathroom",
+//   },
+//   {
+//     heading: "Superior stain removal",
+//     sub: "Removal of dirt & black stains from corners,objects,appliances",
+//   },
+//   {
+//     heading: "Objects removal before cleaning",
+//     sub: "Removal of toiletries and other objects from the bathroom",
+//   },
+//   {
+//     heading: "Superior stain removal",
+//     sub: "Removal of dirt & black stains from corners,objects,appliances",
+//   },
+//   {
+//     heading: "Objects removal before cleaning",
+//     sub: "Removal of toiletries and other objects from the bathroom",
+//   },
+//   {
+//     heading: "Superior stain removal",
+//     sub: "Removal of dirt & black stains from corners,objects,appliances",
+//   },
+// ];
+// export const CLeaningPopExclude = [
+//   {
+//     sub: "Please provide a ladder,if required",
+//   },
+//   {
+//     sub: "Wet wiping of the walls",
+//   },
+//   {
+//     sub: "Cleaning of floor & tiles with scrubbing machine",
+//   },
+// ];
+export const PetServiceInclude = [
   {
-    heading: "Objects removal before cleaning",
-    sub: "Removal of toiletries and other objects from the bathroom",
+    heading: "Pet Bathing",
+    sub: "Thorough cleaning and shampooing of pets",
   },
   {
-    heading: "Superior stain removal",
-    sub: "Removal of dirt & black stains from corners,objects,appliances",
+    heading: "Pet Haircut",
+    sub: "Trimming and styling of pet fur",
   },
   {
-    heading: "Objects removal before cleaning",
-    sub: "Removal of toiletries and other objects from the bathroom",
+    heading: "Pet Routine Checkups",
+    sub: "Regular health examinations for pets",
   },
   {
-    heading: "Superior stain removal",
-    sub: "Removal of dirt & black stains from corners,objects,appliances",
-  },
-  {
-    heading: "Objects removal before cleaning",
-    sub: "Removal of toiletries and other objects from the bathroom",
-  },
-  {
-    heading: "Superior stain removal",
-    sub: "Removal of dirt & black stains from corners,objects,appliances",
+    heading: "Pet Emergency Care",
+    sub: "Immediate care for urgent pet health issues",
   },
 ];
-export const CLeaningPopExclude = [
+
+export const PetServiceExclude = [
   {
-    sub: "Please provide a ladder,if required",
+    sub: "Please provide pet-specific shampoo, if required",
   },
   {
-    sub: "Wet wiping of the walls",
+    sub: "Pet emergency care",
   },
   {
-    sub: "Cleaning of floor & tiles with scrubbing machine",
+    sub: "Specialized diagnostic tests or surgeries",
   },
 ];
 //Category2

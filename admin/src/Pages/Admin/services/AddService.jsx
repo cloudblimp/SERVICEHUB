@@ -108,3 +108,113 @@ const AddService = () => {
 };
 
 export default AddService;
+
+// import React, { useState } from "react";
+// import {
+//   Button,
+//   Alert,
+//   Card,
+//   CardBody,
+//   CardFooter,
+//   Typography,
+//   Input,
+// } from "@material-tailwind/react";
+// import { addServiceCat } from "../../../services/Apis";
+
+// const AddService = () => {
+//   const [formData, setFormData] = useState({
+//     service_name: "",
+//     photo: null,
+//   });
+//   const [loading, setLoading] = useState(false);
+//   const [successAlert, setSuccessAlert] = useState(false);
+//   const [error, setError] = useState(null);
+
+//   const handleAddService = async (e) => {
+//     e.preventDefault();
+//     setLoading(true);
+//     setSuccessAlert(false);
+//     setError(null);
+
+//     const formDataToSend = new FormData();
+//     formDataToSend.append("service_name", formData.service_name);
+//     if (formData.photo) formDataToSend.append("photo", formData.photo);
+
+//     try {
+//       await addServiceCat(formDataToSend);
+//       setLoading(false);
+//       setSuccessAlert(true);
+//       setFormData({ service_name: "", photo: null }); // Reset form
+//     } catch (err) {
+//       setError("Failed to add service category.");
+//       setLoading(false);
+//       console.error("Error adding service category:", err);
+//     }
+//   };
+
+//   const handleInputChange = (e) => {
+//     setFormData({
+//       ...formData,
+//       service_name: e.target.value,
+//     });
+//   };
+
+//   const handleImageUpload = (e) => {
+//     setFormData({
+//       ...formData,
+//       photo: e.target.files[0],
+//     });
+//   };
+
+//   return (
+//     <form onSubmit={handleAddService}>
+//       <Card className="mx-auto w-fit relative bg-white">
+//         <CardBody className="flex flex-col gap-4">
+//           <Typography className="text-[#1A3570] font-bold" variant="h6">
+//             Add New Service Category
+//           </Typography>
+//           <div className="flex gap-4">
+//             <Input
+//               type="text"
+//               name="service_name"
+//               label="Service Category Name"
+//               required
+//               value={formData.service_name}
+//               onChange={handleInputChange}
+//             />
+//           </div>
+//           <div>
+//             <input
+//               type="file"
+//               name="photo"
+//               onChange={handleImageUpload}
+//             />
+//           </div>
+//         </CardBody>
+//         <CardFooter className="pt-0">
+//           {loading ? (
+//             <Button className="bg-[#1A3570]" fullWidth disabled>
+//               Loading...
+//             </Button>
+//           ) : (
+//             <Button className="bg-[#1A3570]" fullWidth type="submit">
+//               Create
+//             </Button>
+//           )}
+//         </CardFooter>
+//       </Card>
+//       {successAlert && (
+//         <Alert color="green" className="mt-4">
+//           Service category created successfully!
+//         </Alert>
+//       )}
+//       {error && (
+//         <Alert color="red" className="mt-4">
+//           {error}
+//         </Alert>
+//       )}
+//     </form>
+//   );
+// };
+
+// export default AddService;
